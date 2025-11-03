@@ -1,30 +1,19 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_memset.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 15:20:01 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:01:26 by loreill          ###   ########.fr       */
+/*   Created: 2025/11/03 18:25:09 by loreill           #+#    #+#             */
+/*   Updated: 2025/11/03 18:43:47 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+#include <stddef.h>
+
+void *ft_memset(void *ptr, int value, size_t num)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
-		return (1);
-	else
-		return (0);
+	unsigned char *adress;
+	unsigned char 
 }
-
-// #include <stdio.h>
-
-// int	main(void)
-// {
-// 	printf("%d\n", ft_isalnum('J'));
-// 	printf("%d\n", ft_isalnum('1'));
-// 	printf("%d\n", ft_isalnum('@'));
-// 	printf("%d\n", ft_isalnum('b'));
-// }

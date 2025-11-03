@@ -1,19 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalnum.c                                       :+:      :+:    :+:   */
+/*   ft_isprint.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 15:20:01 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:01:26 by loreill          ###   ########.fr       */
+/*   Created: 2025/11/03 17:41:28 by loreill           #+#    #+#             */
+/*   Updated: 2025/11/03 18:16:58 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_isalnum(int c)
+int	ft_isprint(int c)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z')
-		|| (c >= '0' && c <= '9'))
+	if (c >= 32 && c <= 126)
 		return (1);
 	else
 		return (0);
@@ -23,8 +22,7 @@ int	ft_isalnum(int c)
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_isalnum('J'));
-// 	printf("%d\n", ft_isalnum('1'));
-// 	printf("%d\n", ft_isalnum('@'));
-// 	printf("%d\n", ft_isalnum('b'));
+// 	printf("%d\n", ft_isprint('J'));
+// 	printf("%d\n", ft_isprint(127));
+// 	printf("%d\n", ft_isprint('@'));
 // }
