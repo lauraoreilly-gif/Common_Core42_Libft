@@ -6,9 +6,12 @@
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 17:41:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:16:58 by loreill          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:12:03 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+// #include "libft.h"
 
 int	ft_isprint(int c)
 {
@@ -17,8 +20,6 @@ int	ft_isprint(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {

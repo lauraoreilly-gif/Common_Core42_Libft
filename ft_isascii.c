@@ -6,9 +6,12 @@
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 16:03:31 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:03:53 by loreill          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:11:44 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+// #include "libft.h"
+#include <stdio.h>
 
 int	ft_isascii(int c)
 {
@@ -17,8 +20,6 @@ int	ft_isascii(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {

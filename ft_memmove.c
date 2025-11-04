@@ -1,30 +1,40 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isdigit.c                                       :+:      :+:    :+:   */
+/*   ft_memmove.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 15:11:56 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/04 17:11:56 by loreill          ###   ########.fr       */
+/*   Created: 2025/11/04 17:44:02 by loreill           #+#    #+#             */
+/*   Updated: 2025/11/04 18:58:51 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
+#include <stdlib.h>
 // #include "libft.h"
 
-int	ft_isdigit(int c)
+void	*ft_memmove(void *dest, const void *src, size_t n)
 {
-	if (c >= '0' && c <= '9')
-		return (1);
-	else
-		return (0);
-}
+	size_t				i;
+	const unsigned char	*source;
+	unsigned char		*destination;
 
-// int	main(void)
-// {
-// 	printf("%d\n", ft_isdigit('J'));
-// 	printf("%d\n", ft_isdigit('1'));
-// 	printf("%d\n", ft_isdigit('@'));
-// 	printf("%d\n", ft_isdigit('b'));
-// }
+	if (!dest && !src)
+		return (NULL);
+	destination = (unsigned char *) dest;
+	source = (const unsigned char *)src;
+	if (destination > source)
+		while (n-- > 0)
+			destination[n] = source[n];
+	else
+	{
+		i = 0;
+		while (i < n)
+		{
+			destination[i] = source[i];
+			i++;
+		}
+	}
+	return (dest);
+}

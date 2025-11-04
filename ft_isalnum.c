@@ -6,9 +6,12 @@
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 15:20:01 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:01:26 by loreill          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:11:31 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
+
+#include <stdio.h>
+// #include "libft.h"
 
 int	ft_isalnum(int c)
 {
@@ -18,8 +21,6 @@ int	ft_isalnum(int c)
 	else
 		return (0);
 }
-
-// #include <stdio.h>
 
 // int	main(void)
 // {

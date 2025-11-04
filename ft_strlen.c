@@ -6,11 +6,14 @@
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/03 18:24:38 by loreill          ###   ########.fr       */
+/*   Updated: 2025/11/04 17:24:40 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int	ft_strlen(char *str)
+#include <stdio.h>
+// #include "libft.h"
+
+size_t	ft_strlen(const char *str)
 {
 	int	i;
 
@@ -20,11 +23,9 @@ int	ft_strlen(char *str)
 	return (i);
 }
 
-// #include <stdio.h>
-
 // int	main(void)
 // {
-// 	char str[] = "test test";
+// 	char str[] = "test 1";
 
-// 	printf("%d\n", ft_strlen(str));
+// 	printf("%zu\n", ft_strlen(str));
 // }

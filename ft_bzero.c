@@ -1,30 +1,45 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_isalpha.c                                       :+:      :+:    :+:   */
+/*   ft_bzero.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2025/11/03 12:53:45 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/04 17:11:38 by loreill          ###   ########.fr       */
+/*   Created: 2025/11/04 15:07:58 by loreill           #+#    #+#             */
+/*   Updated: 2025/11/04 18:10:41 by loreill          ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 // #include "libft.h"
+#include <stdlib.h>
 #include <stdio.h>
 
-int	ft_isalpha(int c)
+void	ft_bzero(void *s, size_t n)
 {
-	if ((c >= 'A' && c <= 'Z') || (c >= 'a' && c <= 'z'))
-		return (1);
-	else
-		return (0);
+	size_t			i;
+	unsigned char	*ptr;
+
+	ptr = (unsigned char *)s;
+	i = 0;
+	while (i < n)
+	{
+		ptr[i] = 0;
+		i++;
+	}
 }
 
 // int	main(void)
 // {
-// 	printf("%d\n", ft_isalpha('J'));
-// 	printf("%d\n", ft_isalpha('1'));
-// 	printf("%d\n", ft_isalpha('@'));
-// 	printf("%d\n", ft_isalpha('b'));
+// 	int		tab[5];
+// 	size_t	i;
+
+// 	ft_bzero(tab, sizeof(tab));
+// 	i = 0;
+// 	while (i < 5)
+// 	{
+// 		printf("%d", tab[i]);
+// 		i++;
+// 	}
+// 	printf("\n");
+// 	return (0);
 // }
