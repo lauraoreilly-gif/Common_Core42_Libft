@@ -3,10 +3,10 @@
 /*                                                        :::      ::::::::   */
 /*   main.c                                             :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
-/*   By: loreill <loreill@student.42.fr>            +#+  +:+       +#+        */
+/*   By: Pro <Pro@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/05 16:36:41 by loreill          ###   ########.fr       */
+/*   Updated: 2025/11/10 13:34:01 by Pro              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -132,7 +132,38 @@ int	main(void)
 	printf("memmove : %s\n", str4);
 	printf("\n");
 
-	printf("###### ft_memmove ######\n");
+	printf("###### ft_strlcpy ######\n");
 	char str5[] = "Hello World";
-	printf("%s",
+	char str6[15];
+	char str7[15];
+	printf("Avant : %s\n", str6);
+	ft_strlcpy(str6, str5, 12);
+	strlcpy(str7, str5, 12);
+	printf("ft_strlcpy : %s\n", str6);
+	printf("strlcpy : %s\n", str7);
+	printf("\n");
+	
+	printf("###### ft_strlcat ######\n");
+	char str8[15] = "Hello";
+	char str9[] = "Copy";
+	char str10[15] = "Hello";
+	printf("Avant dst: %s\n", str8);
+	printf("Avant src: %s\n", str9);
+	ft_strlcat(str8, str9, 10);
+	strlcat(str10, str9, 10);
+	printf("ft_strlcat : %s\n", str8);
+	printf("strlcat : %s\n", str10);
+	printf("\n");
+	
+	printf("###### ft_toupper ######\n");
+	printf("ft_toupper : %d\n", ft_toupper('a'));
+	printf("toupper : %d\n", toupper('a'));
+	printf("\n");
+
+	printf("###### ft_tolower ######\n");
+	printf("ft_tolower : %d\n", ft_tolower('A'));
+	printf("tolower : %d\n", tolower('A'));
+	printf("\n");
+
+		
 }
