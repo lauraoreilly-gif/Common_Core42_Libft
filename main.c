@@ -6,7 +6,7 @@
 /*   By: Pro <Pro@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/10 13:34:01 by Pro              ###   ########.fr       */
+/*   Updated: 2025/11/11 13:14:38 by Pro              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -165,5 +165,46 @@ int	main(void)
 	printf("tolower : %d\n", tolower('A'));
 	printf("\n");
 
-		
+	printf("###### ft_strchr ######\n");
+	printf("test - e\n");
+	printf("ft_strchr : %s\n", ft_strchr("test", 'e'));
+	printf("strchr : %s\n", strchr("test", 'e'));
+	printf("\n");
+	printf("test - z\n");
+	printf("ft_strchr : %s\n", ft_strchr("test", 'z'));
+	printf("strchr : %s\n", strchr("test", 'z'));
+	printf("\n");
+
+	printf("###### ft_strrchr ######\n");
+	printf("bonjour - o\n");
+	printf("ft_strrchr : %s\n", ft_strrchr("bonjour", 'o'));
+	printf("strrchr : %s\n", strrchr("bonjour", 'o'));
+	printf("\n");
+	printf("bonjour - z\n");
+	printf("ft_strrchr : %s\n", ft_strrchr("bonjour", 'z'));
+	printf("strrchr : %s\n", strrchr("bonjour", 'z'));
+	printf("\n");
+
+	printf("###### ft_strncmp ######\n");
+	char str11[]= "bonjour";
+	char str12[]= "bongour";
+	printf("str1 : %s\n", str11);
+	printf("str2 : %s\n", str12);
+	int ret_ft = ft_strncmp(str11, str12, 8);
+    int ret_str = strncmp(str11, str12, 8);
+    printf("ft_strncmp : %d\n", ret_ft);
+    printf("strncmp    : %d\n", ret_str);
+	printf("\n");
+	
+	printf("###### ft_memchr ######\n");
+	char str13[] = "bonjour";
+	char c = 'j';
+	size_t n = 5;
+	printf("Chaîne : %s\n", str13);
+	printf("Cherche '%c' dans les %zu premiers octets\n", c, n);
+	void *ret_ftmemchr = ft_memchr(str13, c, n);
+	void *ret_memchr = memchr(str13, c, n);
+	printf("ft_memchr : %s\n", (char *)ret_ftmemchr);
+	printf("memchr    : %s\n", (char *)ret_memchr);
+	printf("\n");
 }
