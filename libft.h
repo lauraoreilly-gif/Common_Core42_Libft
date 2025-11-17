@@ -6,7 +6,7 @@
 /*   By: Pro <Pro@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/11 13:07:41 by Pro              ###   ########.fr       */
+/*   Updated: 2025/11/11 18:09:02 by Pro              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -34,5 +34,7 @@ char	*ft_strchr(const char *s, int c);
 char	*ft_strrchr(const char *s, int c);
 int		ft_strncmp(const char *s1, const char *s2, size_t n);
 void	*ft_memchr(const void *s, int c, size_t n);
+int		ft_memcmp(const void *s1, const void *s2, size_t n);
+char	*ft_strnstr(const char *haystack, const char *needle, size_t len);
 
 #endif

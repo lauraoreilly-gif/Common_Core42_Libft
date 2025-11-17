@@ -6,7 +6,7 @@
 /*   By: Pro <Pro@student.42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2025/11/03 18:13:28 by loreill           #+#    #+#             */
-/*   Updated: 2025/11/11 13:14:38 by Pro              ###   ########.fr       */
+/*   Updated: 2025/11/13 11:44:57 by Pro              ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -166,21 +166,22 @@ int	main(void)
 	printf("\n");
 
 	printf("###### ft_strchr ######\n");
-	printf("test - e\n");
+	printf("test - cherche le 1er e\n");
 	printf("ft_strchr : %s\n", ft_strchr("test", 'e'));
 	printf("strchr : %s\n", strchr("test", 'e'));
 	printf("\n");
-	printf("test - z\n");
+	printf("test - cherche le 1er make fclean
+		z\n");
 	printf("ft_strchr : %s\n", ft_strchr("test", 'z'));
 	printf("strchr : %s\n", strchr("test", 'z'));
 	printf("\n");
 
 	printf("###### ft_strrchr ######\n");
-	printf("bonjour - o\n");
+	printf("bonjour - cherche le dernier o\n");
 	printf("ft_strrchr : %s\n", ft_strrchr("bonjour", 'o'));
 	printf("strrchr : %s\n", strrchr("bonjour", 'o'));
 	printf("\n");
-	printf("bonjour - z\n");
+	printf("bonjour - cherche le dernier z\n");
 	printf("ft_strrchr : %s\n", ft_strrchr("bonjour", 'z'));
 	printf("strrchr : %s\n", strrchr("bonjour", 'z'));
 	printf("\n");
@@ -207,4 +208,44 @@ int	main(void)
 	printf("ft_memchr : %s\n", (char *)ret_ftmemchr);
 	printf("memchr    : %s\n", (char *)ret_memchr);
 	printf("\n");
+
+	printf("###### ft_memcmp ######\n");
+	char str14[] = "bonjour";
+	char str15[] = "bongour";
+	size_t s = 7;
+	printf("str1 : %s\n", str14);
+	printf("str2 : %s\n", str15);
+	printf("Compare les %zu premiers octets\n", s);
+	int ret_ftmemcmp = ft_memcmp(str14, str15, s);
+	int ret_memcmp = memcmp(str14, str15, s);
+	printf("ft_memcmp : %d\n", ret_ftmemcmp);
+	printf("memcmp    : %d\n", ret_memcmp);
+	printf("\n");
+
+	printf("###### ft_strnstr ######\n");
+	char haystack[] = "bonjour les amis";
+	char needle[] = "les";
+	size_t len = 20;
+	printf("haystack : %s\n", haystack);
+	printf("needle   : %s\n", needle);
+	printf("Cherche dans les %zu premiers caractères\n", len);
+	char *ret_ftstrnstr = ft_strnstr(haystack, needle, len);
+	char *ret_strnstr = strnstr(haystack, needle, len);
+
+	printf("ft_strnstr : %s\n", ret_ft ? ret_ftstrnstr : "NULL");
+	printf("strnstr    : %s\n", ret_str ? ret_strnstr : "NULL");
+	printf("\n");
+	
+	printf("###### ft_atoi ######\n");
+	char	str16[]= "abc452";
+	char	str17[] = "-452";
+	char	str18[] = "  452abc";
+	char	str19[] = "bonjour";
+	char	str20[]= "+--+-+-";
+
+	printf("%d\n", ft_atoi(str16));
+	printf("%d\n", ft_atoi(str17));
+	printf("%d\n", ft_atoi(str18));
+	printf("%d\n", ft_atoi(str19));
+	printf("%d\n", ft_atoi(str20));
 }
